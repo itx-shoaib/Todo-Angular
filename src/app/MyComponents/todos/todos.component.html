@@ -1,3 +1,5 @@
-<ul *ngFor="let item of todo">
-    <li>{{item.id}} - {{item.title}} - {{item.desc}}</li>
-</ul>
+<!-- Populating the items by ngFor same as a For loop -->
+<div *ngFor="let item of todo">
+    <!-- Sending item in component (as a props in react) -->
+    <app-todos-item [item]="item"></app-todos-item>
+</div>
