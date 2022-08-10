@@ -1,7 +1,11 @@
 <!-- Sending item in ngFor as Todo -->
 <div class="my-3">
-    <h2>{{item.title}}</h2>
+    <h2 [class]="'nostrike'?item.active:'strike'">{{item.title}}</h2>
     <p>{{item.desc}}</p>
+    <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" (click)="onClickBoxClick(item)">
+    <label class="form-check-label" for="exampleCheck1">Mark as Done</label>
+    </div>
     <button class="btn btn-danger" (click)="onClick(item)">Delete</button>
     <hr>
 </div>

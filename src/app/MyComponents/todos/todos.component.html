@@ -1,7 +1,7 @@
 <app-add-todos (todoAdd)="Addtodo($event)"></app-add-todos>
 <!-- Populating the items by ngFor same as a For loop -->
 <h2>Your Todos:</h2>
-<div *ngIf="this.todo.length === 0; else elseBlock">
+<div *ngIf=this.todo.length === 0;>
   <h4>No todos to show</h4>
 </div>
 <ng-template #elseBlock>

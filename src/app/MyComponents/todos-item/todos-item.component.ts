@@ -20,4 +20,8 @@ export class TodosItemComponent implements OnInit {
     console.log('Button has been clicked')
   }
 
+  onClickBoxClick(item:Todo){
+
+  }
+
 }
