@@ -1,5 +1,5 @@
 <!-- Populating the items by ngFor same as a For loop -->
 <div *ngFor="let item of todo">
     <!-- Sending item in component (as a props in react) -->
-    <app-todos-item [item]="item"></app-todos-item>
+    <app-todos-item [item]="item" (itemDelete)="Deleteitem($event)"></app-todos-item>
 </div>
