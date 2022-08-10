@@ -42,5 +42,10 @@ export class TodosComponent implements OnInit {
    const index = this.todo.indexOf(item)
    this.todo.splice(index,1)
   }
+  Addtodo(item:Todo){
+   console.log(item);
+  //  Logic for Adding todo in the array
+   this.todo.push(item)
+  }
 
 }

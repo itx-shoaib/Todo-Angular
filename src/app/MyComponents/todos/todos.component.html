@@ -1,5 +1,15 @@
+<app-add-todos (todoAdd)="Addtodo($event)"></app-add-todos>
 <!-- Populating the items by ngFor same as a For loop -->
-<div *ngFor="let item of todo">
-    <!-- Sending item in component (as a props in react) -->
-    <app-todos-item [item]="item" (itemDelete)="Deleteitem($event)"></app-todos-item>
+<h2>Your Todos:</h2>
+<div *ngIf="this.todo.length === 0; else elseBlock">
+  <h4>No todos to show</h4>
 </div>
+<ng-template #elseBlock>
+  <div *ngFor="let item of todo">
+    <!-- Sending item in component (as a props in react) -->
+    <app-todos-item
+      [item]="item"
+      (itemDelete)="Deleteitem($event)"
+    ></app-todos-item>
+  </div>
+</ng-template>
